@@ -41,7 +41,7 @@ angular.module('movieapp')
 		};
 
 		$scope.pageIndex = function() {
-			var pageNumber = $scope.movieNumber/$scope.pageLimit;
+			var pageNumber = Math.floor($scope.movieNumber/$scope.pageLimit);
 			if($scope.movieNumber%$scope.pageLimit>0) {
 				pageNumber++;
 			}
