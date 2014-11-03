@@ -1,0 +1,24 @@
+<div ng-controller="homeController">
+	<div class="in-theater-view">
+		<div class="spinner" ng-show="loading"><img src="images/circle-loading-animation.gif"></div>
+		<div ng-show="!loading">
+			<h1>There are {{movieNumber}} movies in theater now, here is the list of the movie name and the average age of the casts</h1>
+			<ul class="nav nav-pills" role="tablist">
+	  			<li ng-repeat="pagein in pages" role="presentation" ng-class="getClass($index)" ng-click="getPage($index)"><a>{{pagein}}</a></li>
+	  		</ul>
+	  		<p></p>
+			<table class="table table-striped table-hover">
+				<tbody>
+					<tr>
+						<th>Title</th>
+						<th>Average Age</th>
+					</tr>
+					<tr ng-repeat="movieinfo in movies">
+						<td>{{movieinfo.title}}</td>
+						<td>{{movieinfo.averageAge}}</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

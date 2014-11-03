@@ -1,0 +1,19 @@
+{
+  "name": "moviepage",
+  "version": "0.0.1",
+  "description": "showing movies",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "keywords": [
+    "moviepage"
+  ],
+  "author": "jiahui chen",
+  "license": "ISC",
+  "devDependencies": {
+    
+    "grunt-contrib-jshint": "~0.10.0"
+  }
+}

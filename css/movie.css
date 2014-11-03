@@ -1,0 +1,15 @@
+.in-theater-view{
+	position: relative;
+	width: 60%;
+	margin-left: 20%;
+	background-color: white;
+}
+
+.pointer-cursor {
+	cursor: pointer;
+}
+
+.spinner {
+	margin-top: 20px;
+	text-align: center;
+}
