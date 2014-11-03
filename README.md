@@ -13,7 +13,9 @@ To active it, you need to have nodejs and npm and bower installed, my current ve
 5. the moviepage is set up, now we need to config the nginx, go to your nginx location and open the config file with text editor (e.g. C:\nginx\conf\nginx.conf)
 
 6. add following line to the http section, like this
+
 	http	{
+
 		server {		
 			listen 8888;
 			server_name localhost;
@@ -22,14 +24,14 @@ To active it, you need to have nodejs and npm and bower installed, my current ve
 			# set client body size to 2M #
 			client_max_body_size 10M;
 			location /api/ {
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_http_version 1.1;
-                proxy_set_header Host  $http_host;
-                proxy_set_header X-Forwarded-Proto  $scheme;
-                proxy_set_header X-NginX-Proxy true;
-                proxy_pass http://127.0.0.1:8080/;
-                proxy_redirect off;
+                		proxy_set_header X-Real-IP $remote_addr;
+                		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                		proxy_http_version 1.1;
+                		proxy_set_header Host  $http_host;
+                		proxy_set_header X-Forwarded-Proto  $scheme;
+                		proxy_set_header X-NginX-Proxy true;
+                		proxy_pass http://127.0.0.1:8080/;
+                		proxy_redirect off;
 			}
 		}
 	}
