@@ -10,11 +10,7 @@ To active it, you need to have nodejs and npm and bower installed, my current ve
 
 4. run bower install to download the dependencies (e.g. bower install)
 
-5. the moviepage is set up, now we need to config the nginx, go to your nginx location and open the config file with text editor (e.g. C:\nginx\conf\nginx.conf)
-
-6. add following line to the http section, like this
-
-	http	{
+5. the moviepage is set up, now we need to config the nginx, for windows, go to your nginx location and open the config file with text editor (e.g. C:\nginx\conf\nginx.conf), add following line to the http section, change the root to point to the code folder.
 
 		server {		
 			listen 8888;
@@ -34,9 +30,10 @@ To active it, you need to have nodejs and npm and bower installed, my current ve
                 		proxy_redirect off;
 			}
 		}
-	}
 	
-7. I have set up the page to listen at port 8888, you can change it to any port as you like. after save the change, start nginx (e.g. start nginx.exe)
+6. for Linux(test passed in Debian) after install the nginx, go to the /etc/nginx/sites-enabled, create a file with the above content, change the root point to the folder location, and restart the nginx.
+
+7. I have set up the page to listen at port 8888, you can change it to any port as you like. after save the change, restart nginx (e.g. start nginx.exe)
 
 8. open any browser and go to the port (e.g. http://localhost:8888)
 
